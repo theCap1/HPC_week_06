@@ -44,3 +44,6 @@ With the loop over `k` the following performance could be achieved:
 
 #### 7.3 The Unrolled Part
 
+Team  | Time [s] | # of executions | FP32 GFLOPs | peak [%]
+------------- | ------------- | ------------- | ------------- | -------------
+Mr. Anderson | 21.5355 | 10000000 | 34.2355 | 53.49

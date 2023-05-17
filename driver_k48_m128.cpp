@@ -11,7 +11,7 @@ extern "C" {
 }
 
 int main(){
-    int64_t i_m = 128; // 32 previously
+    int64_t i_m = 32*4; // 32 previously
     int64_t i_n = 6;
     int64_t i_k = 48;
 
