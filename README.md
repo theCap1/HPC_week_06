@@ -47,3 +47,9 @@ With the loop over `k` the following performance could be achieved:
 Team  | Time [s] | # of executions | FP32 GFLOPs | peak [%]
 ------------- | ------------- | ------------- | ------------- | -------------
 Mr. Anderson | 21.5355 | 10000000 | 34.2355 | 53.49
+
+####
+
+Team  | Time [s] | # of executions | FP32 GFLOPs | peak [%]
+------------- | ------------- | ------------- | ------------- | -------------
+Mr. Anderson | 1.71659 | 100000 | 34.3602 | 53.68

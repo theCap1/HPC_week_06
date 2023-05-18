@@ -4,7 +4,7 @@
 #define DTYPE float
 
 extern "C" {
-    void gemm_asm_sve_128_6_48( DTYPE const * i_a,
+    void gemm_asm_sve_128_48_48( DTYPE const * i_a,
                                 DTYPE const * i_b,
                                 DTYPE       * io_c );
 }
@@ -12,8 +12,8 @@ extern "C" {
 int main(){
 
     int64_t i_m = 32*4;
-    int64_t i_n = 6;
-    int64_t i_k = 2;
+    int64_t i_n = 6*8;
+    int64_t i_k = 48;
 
     // DTYPE a[16] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
     // DTYPE b[6] = {1,2,3,4,5,6};
@@ -108,7 +108,7 @@ int main(){
     // }
 
     std::cout << "\nRetransposed FMA C+=A*B is:\n";
-    gemm_asm_sve_128_6_48(a,b_transposed,c);
+    gemm_asm_sve_128_48_48(a,b_transposed,c);
     // for(int r=0; r<i_m; r++)    // i_m rows = 16
     // {
     //     for(int col=0; col<i_n; col++)  // i_n columns = 6

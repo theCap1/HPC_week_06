@@ -25,7 +25,7 @@ gemm_asm_sve_128_6_48:
         // the matrix C is assumed to be stored in transposed version for more efficient memory loads and stores in this column major memory implementation.
 
         // loop counter for k
-        mov w17, 2
+        mov w17, 48
 
         loop_k: // // loop over columns of A and rows of B
         // loop counter for m
